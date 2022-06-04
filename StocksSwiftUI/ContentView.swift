@@ -20,11 +20,9 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
         let filteredStocks = self.stockListVM.searchTerm.isEmpty ? self.stockListVM.stocks : self.stockListVM.stocks.filter { $0.symbol.starts(with: self.stockListVM.searchTerm) }
         
         return NavigationView {
-                    
             ZStack(alignment: .leading) {
                 Color.black
                         
@@ -41,8 +39,19 @@ struct ContentView: View {
                 StockListView(stocks: filteredStocks)
                     .offset(y: 140)
                 
-                NewsArticleView(newsArticles: self.stockListVM.news)
-                    .offset(y: 300)
+                NewsArticleView(newsArticles: self.stockListVM.news, onDragBegin: { value in
+                    self.stockListVM.dragOffset = value.translation
+                }, onDragEnd: { value in
+                    
+                    if value.translation.height < 0 {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 150)
+                    } else {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 400)
+                    }
+                    
+                })
+                .animation(.spring())
+                .offset(y: self.stockListVM.dragOffset.height)
             }
                     
             .navigationBarTitle("Stocks")
@@ -53,5 +62,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewLayout(.device)
+            
     }
 }
