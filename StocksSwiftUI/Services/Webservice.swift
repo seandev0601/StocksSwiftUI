@@ -34,7 +34,7 @@ class Webservice {
     
     func getStocks(completion: @escaping (([Stock]?) -> Void)) {
         
-        guard let url = URL(string: "https://silicon-bramble.glitch.me/stocks") else {
+        guard let url = URL(string: "https://island-bramble.glitch.me/stocks") else {
             fatalError("URL is not correct")
         }
         
