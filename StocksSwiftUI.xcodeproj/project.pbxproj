@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E5CCE82284B64C800FF0826 /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5CCE81284B64C800FF0826 /* StockListView.swift */; };
 		8E9970E828433C8E00A2F530 /* StocksSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9970E728433C8E00A2F530 /* StocksSwiftUIApp.swift */; };
 		8E9970EA28433C8E00A2F530 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9970E928433C8E00A2F530 /* ContentView.swift */; };
 		8E9970EC28433C9600A2F530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9970EB28433C9600A2F530 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E5CCE81284B64C800FF0826 /* StockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
 		8E9970E428433C8E00A2F530 /* StocksSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9970E728433C8E00A2F530 /* StocksSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksSwiftUIApp.swift; sourceTree = "<group>"; };
 		8E9970E928433C8E00A2F530 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8E99711D2843A8B400A2F530 /* SearchView.swift */,
+				8E5CCE81284B64C800FF0826 /* StockListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9970EA28433C8E00A2F530 /* ContentView.swift in Sources */,
+				8E5CCE82284B64C800FF0826 /* StockListView.swift in Sources */,
 				8E9970E828433C8E00A2F530 /* StocksSwiftUIApp.swift in Sources */,
 				8E997116284342FA00A2F530 /* Stock.swift in Sources */,
 				8E99711E2843A8B400A2F530 /* SearchView.swift in Sources */,
